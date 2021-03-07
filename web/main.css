@@ -1,0 +1,58 @@
+div#allContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    color: #aaa;
+    background-image: url(spaceback.png);
+    background-size: contain;
+    font-family: "Roboto";
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+video#video {
+    box-shadow: 0px 0px 10px #555;
+}
+
+p.description {
+    width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    margin: 10px;
+}
+
+.success, .error {
+    padding: 10px;
+	  text-align: center;
+}
+
+.error {
+	  color: #f44336;
+	  background-color: #ef9a9a26;
+}
+
+.success {
+    color: #4CAF50;
+	  background-color: #A5D6A726;
+}
+
+.success, .error {
+	  width: 400px;
+}
