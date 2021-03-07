@@ -61,6 +61,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 by clicking the button below, your username will get transmitted to my laptop, which will then send the username onto the arduino mega, which will then display on the board and, most importantly, generate your lucky number!
             </p>
 
+            <p class="description">
+                <strong>your lucky number will appear next to the username you entered!</strong>
+            </p>
+
             <form action="index.php" method="post">
 
                 <label for="username">input your username (16 characters max):</label>
