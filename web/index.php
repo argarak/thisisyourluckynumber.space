@@ -48,9 +48,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h1>thisisyourluckynumber.space</h1>
             <h3>find your lucky number using state-of-the-art hardware and streaming tech!</h3>
 
-            <video id="video" autoplay>
-                <!-- Fallback here -->
-            </video>
+            <div class="videoContainer">
+                <div class="videoOverlay" onclick="overlay()">
+                    click here to view the stream!
+                </div>
+                <video id="video" autoplay>
+                    <!-- Fallback here -->
+                </video>
+            </div>
 
             <p class="description">
                 by clicking the button below, your username will get transmitted to my laptop, which will then send the username onto the arduino mega, which will then display on the board and, most importantly, generate your lucky number!
@@ -67,6 +72,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <script>
+         function overlay() {
+             video.play();
+             document.querySelector(".videoOverlay").style.display = "none";
+         }
+
          var video = document.getElementById('video');
          var videoSrc = 'http://thisisyourluckynumber.space/hls/lucky.m3u8';
          if (Hls.isSupported()) {
@@ -90,7 +100,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          else if (video.canPlayType('application/vnd.apple.mpegurl')) {
              video.src = videoSrc;
          }
-         video.play();
         </script>
 
     </body>
