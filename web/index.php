@@ -3,7 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
 
-    if (strlen($name) > 16 || strlen($name) > 1) {
+    if (strlen($username) > 16 || strlen($username) < 1) {
         $_SESSION['error'] = "ERROR: please enter a valid username!";
     } else {
         $userfile = fopen("/var/www/html/user", "w");
